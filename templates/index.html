@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion Detection</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        h1 {
+            margin-top: 50px;
+        }
+        
+        .video-frame {
+            margin-top: 50px;
+        }
+        
+        .emotion-buttons {
+            margin-top: 50px;
+        }
+        
+        .emotion-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Emotion Detection</h1>
+    <div class="video-frame">
+        <img src="{{ url_for('video_feed') }}">
+    </div>
+    <div class="emotion-buttons">
+        <a class="emotion-button" href="{{ url_for('redirect_playlist', emotion='Angry') }}">Angry</a>
+        <a class="emotion-button" href="{{ url_for('redirect_playlist', emotion='Disgust') }}">Disgust</a>
+        <a class="emotion-button" href="{{ url_for('redirect_playlist', emotion='Fear') }}">Fear</a>
+        <a class="emotion-button" href="{{ url_for('redirect_playlist', emotion='Happy') }}">Happy</a>
+        <a class="emotion-button" href="{{ url_for('redirect_playlist', emotion='Neutral') }}">Neutral</a>
+        <a class="emotion-button" href="{{ url_for('redirect_playlist', emotion='Sad') }}">Sad</a>
+        <a class="emotion-button" href="{{ url_for('redirect_playlist', emotion='Surprise') }}">Surprise</a>
+    </div>
+</body>
+</html>
